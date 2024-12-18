@@ -1,0 +1,365 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.menubar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: brown;
+    padding: 10px 0;
+}
+
+.menubar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 15px;
+}
+
+.menubar a:hover {
+    background-color: #555;
+    border-radius: 10px;
+}
+
+.menubar i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+.info-box {
+    display: none; /* Varsayılan olarak gizli */
+    margin: 20px auto; /* Ortalamak için */
+    padding: 20px; /* İç boşluk */
+    background-color: #fff; /* Beyaz arka plan */
+    border: 1px solid #ddd; /* Hafif bir çerçeve */
+    border-radius: 15px; /* Köşeleri yuvarla */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    max-width: 500px; /* Maksimum genişlik */
+    text-align: center; /* Ortalanmış içerik */
+    font-family: 'Roboto', sans-serif; /* Modern bir yazı tipi */
+}
+.info-box h2 {
+    font-size: 1.8rem; /* Daha büyük başlık */
+    color: #4facfe; /* Hoş bir mavi renk */
+    margin-bottom: 15px; /* Başlık alt boşluk */
+}
+.info-box p {
+    font-size: 1.2rem; /* Yazı boyutu */
+    color: #555; /* Yazı rengi */
+    margin: 10px 0; /* Yazı boşluğu */
+}
+.info-box.active {
+    display: block;
+}
+.mainImages{
+    display: flex;
+}
+.mainImages h3{
+    font-style: oblique;
+    background-color: lightblue;
+    width: fit-content;
+    padding: 8px;
+    margin: 5px;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+
+}
+.contactBtn {
+    margin-top: 15px; /* Buton üst boşluk */
+    padding: 10px 20px; /* Buton iç boşluk */
+    background-color: #4facfe; /* Mavi arka plan */
+    color: white; /* Beyaz yazı rengi */
+    font-size: 1rem; /* Yazı boyutu */
+    border: none; /* Kenar kaldır */
+    border-radius: 25px; /* Yuvarlatılmış köşeler */
+    cursor: pointer; /* İşaretçi değişimi */
+    transition: all 0.3s ease; /* Geçiş efekti */
+}
+
+.contactBtn:hover {
+    background-color: #00c6ff; /* Hover rengini değiştir */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hover gölgesi */
+}
+
+.categories, .subcategories {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px; /* Daha geniş bir kategori paneli */
+    height: 100%;
+    background: linear-gradient(to bottom, #CC66FF, #CCCCFF); /* Hoş bir degrade arka plan */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3); /* Daha belirgin gölge */
+    padding: 20px;
+    z-index: 1000;
+    overflow-y: auto; /* İçerik sığmazsa kaydırma çubuğu */
+    color: white; /* Yazı rengi */
+}
+
+.categories h2, .subcategories h2 {
+    margin-top: 35px;
+    text-align: center;
+    font-size: 2rem; /* Büyük başlık */
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2); /* Hafif beyaz arka plan */
+    padding: 10px 15px; /* Başlık iç boşluk */
+    border-radius: 15px; /* Köşeleri yuvarla */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+}
+
+.categories ul, .subcategories ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.categories ul li, .subcategories ul li {
+    margin: 10px 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.3); /* Hafif saydam arka plan */
+    color: #fff; /* Beyaz yazı rengi */
+    font-size: 1.2rem; /* Yazı boyutu */
+    border-radius: 15px; /* Yuvarlatılmış köşeler */
+    text-align: center; /* Yazıları ortala */
+    cursor: pointer; /* Tıklanabilir işaretçi */
+    transition: transform 0.3s, background 0.3s; /* Hover efektleri için geçiş süresi */
+}
+
+.categories ul li:hover, .subcategories ul li:hover {
+    background: rgba(255, 255, 255, 0.8); /* Hover'da daha açık arka plan */
+    color: #f44336; /* Hover'da yazı rengini değiştir */
+    transform: translateX(10px); /* Hover'da sağa hareket */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hover gölgesi */
+}
+
+.closeBtn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px; /* Üstten boşluk */
+    right: 15px; /* Sağdan boşluk */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+    z-index: 1100; /* Kategorilerden daha üstte görünsün */
+}
+.closeBtn:hover {
+    background-color: #ff6659; /* Hover'da daha açık kırmızı */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Daha belirgin gölge */
+}
+.image{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    
+}
+.hidden {
+    display: none;
+}
+.buzdolabi_image{
+    width: 150px;
+}
+
+.buzdolabi{
+    display: none;
+}
+.buzdolabi_cards{
+    background-color: bisque;
+    width: 350px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.camasir{
+    display: none;
+}
+
+.hakkimizdaCls {
+    display: none; /* Varsayılan olarak gizli */
+    margin: 20px auto; /* Ortalamak için */
+    padding: 20px; /* İç boşluk */
+    background: linear-gradient(to right, #f9f9f9, #e0e0e0); /* Hafif degrade arka plan */
+    border-radius: 15px; /* Yuvarlatılmış köşeler */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    max-width: 800px; /* Maksimum genişlik */
+    font-family: 'Roboto', sans-serif; /* Modern yazı tipi */
+    line-height: 1.8; /* Satır aralığı */
+    color: #333; /* Yazı rengi */
+    text-align: justify; /* Paragrafları iki yana yasla */
+}
+
+.hakkimizdaCls h2 {
+    text-align: center; /* Başlık ortala */
+    font-size: 2rem; /* Daha büyük başlık */
+    margin-bottom: 20px; /* Alt boşluk */
+    color: #4facfe; /* Hoş bir mavi renk */
+    border-bottom: 2px solid #4facfe; /* Alt çizgi ile vurgu */
+    display: inline-block; /* İçeriği ortalamak için */
+    padding-bottom: 10px; /* Alt boşluk */
+}
+
+.hakkimizdaCls p {
+    margin-bottom: 15px; /* Paragraflar arası boşluk */
+    font-size: 1.2rem; /* Daha okunabilir yazı boyutu */
+    color: #555; /* Daha yumuşak bir yazı rengi */
+}
+
+.hakkimizdaCls ul {
+    list-style: none; /* Madde işaretlerini kaldır */
+    padding: 0; /* Varsayılan boşlukları sıfırla */
+    margin: 20px 0; /* Yukarı ve aşağı boşluk ekle */
+}
+
+.hakkimizdaCls ul li {
+    margin-bottom: 10px; /* Her madde arasında boşluk */
+    padding: 10px; /* İç boşluk */
+    background: #4facfe; /* Mavi arka plan */
+    color: white; /* Beyaz yazı rengi */
+    border-radius: 10px; /* Yuvarlatılmış köşeler */
+    font-size: 1.1rem; /* Yazı boyutu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+    text-align: center; /* Ortala */
+}
+
+.welcome-message {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.bulasik{
+    display: none;
+}
+.bulasik_cards{
+    background-color: darkkhaki;
+    width: 320px;
+    margin: 5px;
+    border-radius: 15px;
+    text-align: center;
+    padding: 10px;
+}
+.bulasik_image{
+    width: 150px;
+    height: 200px;
+}
+.hero-section {
+    text-align: center;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+    padding: 100px 20px;
+    margin-bottom: 20px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-section .cta-button {
+    padding: 15px 30px;
+    background-color: white;
+    color: #00f2fe;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.hero-section .cta-button:hover {
+    background-color: #00f2fe;
+    color: white;
+}
+.content-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.branch {
+    display: inline-block;
+    margin: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 300px;
+}
+
+.branch:hover {
+    transform: scale(1.05);
+}
+
+.branch img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.branch h3 {
+    padding: 10px;
+    background: #4facfe;
+    color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 0;
+}
+.buzdolabi_cards, .camasir_cards, .bulasik_cards{
+    background: white; /* Arka plan rengini beyaz yaptım */
+    border-radius: 15px; /* Köşeleri yuvarlattım */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gölgeler ekledim */
+    overflow: hidden; /* Taşmayı önlemek için */
+    transition: transform 0.3s, box-shadow 0.3s; /* Hover efektleri için geçiş süresi */
+    margin: 15px auto; /* Kartları ortalamak için margin ekledim */
+    text-align: center; /* Metni ortaladım */
+    padding: 20px; /* İç boşluk ekledim */
+    max-width: 350px; /* Maksimum genişlik belirledim */
+    margin-top: 55px;
+}
+
+.buzdolabi_cards:hover, .camasir_cards:hover, .bulasik_cards:hover, .branch:hover {
+    transform: translateY(-10px); /* Hover'da yukarı hareket efekti */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Hover'da gölgeyi artırdım */
+}
+
+.buzdolabi_image, .camasir_image, .bulasik_image{
+    width: 100%; /* Resim genişliğini yüzde olarak ayarladım */
+    height: auto; /* Yüksekliği orantılı ayarladım */
+    border-radius: 15px 15px 0 0; /* Sadece üst köşeleri yuvarlattım */
+}
+
+.buzdolabi_cards h3, .camasir_cards h3, .bulasik_cards h3 {
+    margin: 15px 0 0; /* Başlık üstü boşluk ve altı sıkıştırma */
+    font-size: 1.2rem; /* Yazı boyutunu biraz büyüttüm */
+    color: #333; /* Yazı rengini koyulaştırdım */
+    font-weight: bold; /* Kalın yazı */
+    padding: 10px; /* Ekstra iç boşluk */
+    background-color: #f9f9f9; /* Başlık için arka plan */
+    border-top: 1px solid #eee; /* Başlık üstüne bir çizgi */
+}
