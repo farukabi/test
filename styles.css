@@ -182,6 +182,10 @@ body {
 }
 .camasir{
     display: none;
+    flex-wrap: wrap; /* Kartların satır dolması sağlanır */
+    justify-content: center; /* Kartlar ortalanır */
+    gap: 15px; /* Kartlar arasında boşluk eklenir */
+    padding: 20px;
 }
 
 .hakkimizdaCls {
@@ -341,6 +345,9 @@ body {
     padding: 20px; /* İç boşluk ekledim */
     max-width: 350px; /* Maksimum genişlik belirledim */
     margin-top: 55px;
+    flex: 1 1 calc(33.333% - 30px); /* Her kart 3'te 1 genişlik alır */
+    max-width: calc(33.333% - 30px); /* Maksimum genişlik sınırlandırılır */
+    box-sizing: border-box;
 }
 
 .buzdolabi_cards:hover, .camasir_cards:hover, .bulasik_cards:hover, .branch:hover {
@@ -362,4 +369,17 @@ body {
     padding: 10px; /* Ekstra iç boşluk */
     background-color: #f9f9f9; /* Başlık için arka plan */
     border-top: 1px solid #eee; /* Başlık üstüne bir çizgi */
+}
+@media (max-width: 768px) {
+    .buzdolabi_cards, .camasir_cards, .bulasik_cards {
+        flex: 1 1 calc(50% - 20px); /* Kartlar 2'ye bölünür */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .buzdolabi_cards, .camasir_cards, .bulasik_cards {
+        flex: 1 1 100%; /* Küçük ekranlarda kartlar tam genişlik alır */
+        max-width: 100%;
+    }
 }
