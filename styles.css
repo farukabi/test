@@ -164,22 +164,15 @@ body {
 .hidden {
     display: none;
 }
-.buzdolabi_image{
-    width: 150px;
-}
 
 .buzdolabi{
     display: none;
+    flex-wrap: wrap; /* Kartların satır dolması sağlanır */
+    justify-content: center; /* Kartlar ortalanır */
+    gap: 15px; /* Kartlar arasında boşluk eklenir */
+    padding: 20px;
 }
-.buzdolabi_cards{
-    background-color: bisque;
-    width: 350px;
-    text-align: center;
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 15px;
-    margin-left: 10px;
-}
+
 .camasir{
     display: none;
     flex-wrap: wrap; /* Kartların satır dolması sağlanır */
@@ -251,18 +244,7 @@ body {
 .bulasik{
     display: none;
 }
-.bulasik_cards{
-    background-color: darkkhaki;
-    width: 320px;
-    margin: 5px;
-    border-radius: 15px;
-    text-align: center;
-    padding: 10px;
-}
-.bulasik_image{
-    width: 150px;
-    height: 200px;
-}
+
 .hero-section {
     text-align: center;
     background: linear-gradient(to right, #4facfe, #00f2fe);
@@ -401,4 +383,3 @@ body {
     border-radius: 8px;
     color: white;
 }
- 
