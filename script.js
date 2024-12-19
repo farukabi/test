@@ -6,6 +6,7 @@ const subeler = document.getElementById("home");
 const hakkimizda = document.getElementById('hakkimizda');
 const bulasikMak = document.getElementById("bulasik");
 const buzdolabiSection = document.getElementById('buzdolabi');
+const galery = document.getElementById("galleryCarousel");
 function iconClicked(iconName){
     if (iconName === 'Contact') {
         document.getElementById('contact-info').classList.add('active');
@@ -28,6 +29,7 @@ function showHakkimizda(){
     buzdolabiSection.style.display = 'none'; 
     camasirMakineleri.style.display = "none";
     bulasikMak.style.display = "none";
+    galery.classList.add('hidden');
 }
 function closeInfoBox () {
     document.getElementById('contact-info').classList.remove('active');
@@ -57,7 +59,7 @@ function showBuzdolabi() {
     bulasikMak.style.display = "none";
     camasirMakineleri.style.display = "none";
     hakkimizda.style.display = "none";
-
+    galery.classList.add('hidden');
 }
 function showCamasir(){
     camasirMakineleri.style.display='flex';
@@ -68,6 +70,7 @@ function showCamasir(){
     buzdolabiSection.style.display = 'none'; 
     bulasikMak.style.display = "none";
     hakkimizda.style.display = "none";
+    galery.classList.add('hidden');
 }
 function resetView(){
     buzdolabiSection.style.display = 'none'; 
@@ -76,6 +79,7 @@ function resetView(){
     hakkimizda.style.display = "none";
     bulasikMak.style.display = "none";
     subeler.classList.remove("hidden");
+    galery.classList.remove('hidden');
     
 }
 function showBulasik(){
@@ -87,6 +91,7 @@ function showBulasik(){
     camasirMakineleri.style.display = "none";
     buzdolabiSection.style.display = 'none'; 
     hakkimizda.style.display = "none";
+    galery.classList.add('hidden');
 }
 
 
