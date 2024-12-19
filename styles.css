@@ -243,6 +243,10 @@ body {
 }
 .bulasik{
     display: none;
+    flex-wrap: wrap; /* Kartların satır dolması sağlanır */
+    justify-content: center; /* Kartlar ortalanır */
+    gap: 15px; /* Kartlar arasında boşluk eklenir */
+    padding: 20px;
 }
 
 .hero-section {
