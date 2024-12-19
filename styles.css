@@ -383,3 +383,21 @@ body {
         max-width: 100%;
     }
 }
+.buzdolabi_image, .camasir_image, .bulasik_image {
+    width: 80%; /* Resmin genişliğini küçült */
+    max-width: 200px; /* Maksimum genişlik belirle */
+    height: auto; /* Yükseklik orantılı ayarlansın */
+    margin: 0 auto; /* Resmi ortala */
+}
+.gallery-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.6); /* Yazıların arka planı için saydam bir katman */
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+}
