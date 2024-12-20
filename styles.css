@@ -7,31 +7,49 @@ body {
 
 .menubar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /* Menü öğelerini genişlik boyunca dağıt */
     align-items: center;
-    background-color: brown;
-    padding: 10px 0;
+    background-color: #2C3E50; /* Modern koyu bir arka plan rengi */
+    padding: 10px 30px; /* Daha geniş bir boşluk */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
+    position: sticky; /* Menü çubuğunu sabitler */
+    top: 0; /* Sabit pozisyon için yukarıda kalır */
+    z-index: 1000; /* Diğer içeriklerin üstünde görünsün */
 }
 
 .menubar a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
+    color: #ECF0F1; /* Modern açık yazı rengi */
+    text-decoration: none; /* Alt çizgiyi kaldır */
+    font-size: 1.1rem; /* Yazı boyutunu artır */
     display: flex;
-    flex-direction: column;
     align-items: center;
-    padding: 5px 15px;
+    padding: 10px 20px; /* Daha geniş bir tıklama alanı */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Hover için geçiş animasyonu */
+    border-radius: 25px; /* Buton görünümü için yuvarlatılmış köşeler */
 }
 
 .menubar a:hover {
-    background-color: #555;
-    border-radius: 10px;
+    color: #2C3E50; /* Yazı rengini koyulaştır */
+    background-color: #ECF0F1; /* Arka planı değiştir */
 }
 
 .menubar i {
-    font-size: 24px;
-    margin-bottom: 5px;
+    font-size: 1.5rem; /* İkon boyutunu artır */
+    margin-right: 8px; /* İkon ve yazı arasında boşluk bırak */
 }
+
+@media (max-width: 768px) {
+    .menubar {
+        flex-wrap: wrap; /* Daha küçük ekranlarda menüyü sardır */
+    }
+
+    .menubar a {
+        flex: 1 1 calc(33.33% - 10px); /* Mobil uyumlu sütun görünümü */
+        text-align: center; /* Metni ortala */
+        margin: 5px 0; /* Öğeler arasında boşluk bırak */
+    }
+}
+
 .info-box {
     display: none; /* Varsayılan olarak gizli */
     margin: 20px auto; /* Ortalamak için */
@@ -92,68 +110,70 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    width: 300px; /* Daha geniş bir kategori paneli */
+    width: 300px; /* Daha geniş ve modern bir yan panel */
     height: 100%;
-    background: linear-gradient(to bottom, #CC66FF, #CCCCFF); /* Hoş bir degrade arka plan */
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3); /* Daha belirgin gölge */
+    background: linear-gradient(135deg, #1abc9c, #16a085); /* Modern degrade arka plan */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Hafif gölge efekti */
     padding: 20px;
     z-index: 1000;
-    overflow-y: auto; /* İçerik sığmazsa kaydırma çubuğu */
-    color: white; /* Yazı rengi */
+    overflow-y: auto; /* Uzun içerik için kaydırma çubuğu */
+    color: #fff;
+    
+    transition: transform 0.3s ease; /* Yumuşak animasyon */
 }
 
 .categories h2, .subcategories h2 {
-    margin-top: 35px;
     text-align: center;
-    font-size: 2rem; /* Büyük başlık */
-    color: #fff;
-    background: rgba(255, 255, 255, 0.2); /* Hafif beyaz arka plan */
-    padding: 10px 15px; /* Başlık iç boşluk */
-    border-radius: 15px; /* Köşeleri yuvarla */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+    font-size: 1.8rem;
+    color: #ecf0f1;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ecf0f1; /* Alt çizgi ile vurgu */
+    padding-bottom: 10px;
 }
 
 .categories ul, .subcategories ul {
     list-style: none;
     padding: 0;
-    margin-top: 40px;
 }
 
 .categories ul li, .subcategories ul li {
     margin: 10px 0;
     padding: 15px;
-    background: rgba(255, 255, 255, 0.3); /* Hafif saydam arka plan */
-    color: #fff; /* Beyaz yazı rengi */
-    font-size: 1.2rem; /* Yazı boyutu */
-    border-radius: 15px; /* Yuvarlatılmış köşeler */
-    text-align: center; /* Yazıları ortala */
-    cursor: pointer; /* Tıklanabilir işaretçi */
-    transition: transform 0.3s, background 0.3s; /* Hover efektleri için geçiş süresi */
+    background: rgba(255, 255, 255, 0.1); /* Hafif şeffaf arka plan */
+    color: #ecf0f1; /* Yazı rengi */
+    font-size: 1.2rem;
+    border-radius: 10px; /* Yuvarlatılmış köşeler */
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s; /* Geçiş animasyonu */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
 }
 
 .categories ul li:hover, .subcategories ul li:hover {
-    background: rgba(255, 255, 255, 0.8); /* Hover'da daha açık arka plan */
-    color: #f44336; /* Hover'da yazı rengini değiştir */
-    transform: translateX(10px); /* Hover'da sağa hareket */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hover gölgesi */
+    background: rgba(255, 255, 255, 0.3); /* Hover arka plan değişimi */
+    color: #1abc9c; /* Yazı rengini değiştir */
+    transform: scale(1.05); /* Hafif büyütme efekti */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hover gölge efekti */
 }
 
 .closeBtn {
-    background-color: #f44336;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #e74c3c;
     color: white;
     border: none;
     border-radius: 50%;
     padding: 10px;
     cursor: pointer;
-    position: absolute;
-    top: 15px; /* Üstten boşluk */
-    right: 15px; /* Sağdan boşluk */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif gölge */
-    z-index: 1100; /* Kategorilerden daha üstte görünsün */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Hafif gölge efekti */
+    z-index: 1100;
+    transition: background-color 0.3s ease;
 }
+
 .closeBtn:hover {
-    background-color: #ff6659; /* Hover'da daha açık kırmızı */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Daha belirgin gölge */
+    background-color: #c0392b;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 .image{
     width: 100%;
@@ -314,7 +334,7 @@ body {
 
 .branch h3 {
     padding: 10px;
-    background: #4facfe;
+    background: #DC143C;
     color: white;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
