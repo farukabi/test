@@ -93,6 +93,9 @@ function showBulasik(){
     hakkimizda.style.display = "none";
     galery.classList.add('hidden');
 }
+function flipCard(card) {
+    card.classList.toggle('flipped'); // Kartı döndür
+}
 
 
  
