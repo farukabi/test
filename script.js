@@ -7,21 +7,11 @@ const hakkimizda = document.getElementById('hakkimizda');
 const bulasikMak = document.getElementById("bulasik");
 const buzdolabiSection = document.getElementById('buzdolabi');
 const galery = document.getElementById("galleryCarousel");
-function iconClicked(iconName){
-    if (iconName === 'Contact') {
-        document.getElementById('contact-info').classList.add('active');
-    } else{
-        alert(iconName+ 'icon clicked');
-    }
-    
-}
-window.onload = function() {
-    const welcomeMessage = document.getElementById('welcome-message');
-    welcomeMessage.classList.remove('hidden'); // Mesajı görünür yap
-    setTimeout(() => {
-        welcomeMessage.classList.add('hidden'); // 5 saniye sonra gizle
-    }, 2500);
-}
+const kurutmalik = document.getElementById("kurutma");
+
+function iconClicked(){
+  document.getElementById('contact-info').classList.add('active');
+} 
 function showHakkimizda(){
     hakkimizda.style.display = 'block';
     mainImage.classList.add("hidden");
@@ -30,6 +20,7 @@ function showHakkimizda(){
     camasirMakineleri.style.display = "none";
     bulasikMak.style.display = "none";
     galery.classList.add('hidden');
+    kurutmalik.style.display = "none";
 }
 function closeInfoBox () {
     document.getElementById('contact-info').classList.remove('active');
@@ -60,6 +51,7 @@ function showBuzdolabi() {
     camasirMakineleri.style.display = "none";
     hakkimizda.style.display = "none";
     galery.classList.add('hidden');
+    kurutmalik.style.display = "none";
 }
 function showCamasir(){
     camasirMakineleri.style.display='flex';
@@ -71,6 +63,7 @@ function showCamasir(){
     bulasikMak.style.display = "none";
     hakkimizda.style.display = "none";
     galery.classList.add('hidden');
+    kurutmalik.style.display = "none";
 }
 function resetView(){
     buzdolabiSection.style.display = 'none'; 
@@ -80,7 +73,7 @@ function resetView(){
     bulasikMak.style.display = "none";
     subeler.classList.remove("hidden");
     galery.classList.remove('hidden');
-    
+    kurutmalik.style.display = "none";
 }
 function showBulasik(){
     bulasikMak.style.display = "flex";
@@ -91,7 +84,20 @@ function showBulasik(){
     camasirMakineleri.style.display = "none";
     buzdolabiSection.style.display = 'none'; 
     hakkimizda.style.display = "none";
+    kurutmalik.style.display = "none";
     galery.classList.add('hidden');
+}
+function showKurutma(){
+    bulasikMak.style.display = "none";
+    categoriesBar.classList.add('hidden');
+    subcategoriesBar.classList.add('hidden');
+    mainImage.classList.add('hidden');
+    subeler.classList.add("hidden");
+    camasirMakineleri.style.display = "none";
+    buzdolabiSection.style.display = 'none'; 
+    hakkimizda.style.display = "none";
+    galery.classList.add('hidden');
+    kurutmalik.style.display = "flex";
 }
 function flipCard(card) {
     card.classList.toggle('flipped'); // Kartı döndür
