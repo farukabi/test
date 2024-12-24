@@ -184,23 +184,6 @@ body {
 .hidden {
     display: none;
 }
-
-.buzdolabi{
-    display: none;
-    flex-wrap: wrap; /* Kartların satır dolması sağlanır */
-    justify-content: center; /* Kartlar ortalanır */
-    gap: 15px; /* Kartlar arasında boşluk eklenir */
-    padding: 20px;
-}
-
-.camasir{
-    display: none;
-    flex-wrap: wrap; /* Kartların satır dolması sağlanır */
-    justify-content: center; /* Kartlar ortalanır */
-    gap: 15px; /* Kartlar arasında boşluk eklenir */
-    padding: 20px;
-}
-
 .hakkimizdaCls {
     display: none; /* Varsayılan olarak gizli */
     margin: 20px auto; /* Ortalamak için */
@@ -247,28 +230,6 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Hafif gölge */
     text-align: center; /* Ortala */
 }
-
-.welcome-message {
-    position: fixed;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0,0,0,0.8);
-    color: #fff;
-    padding: 20px 40px;
-    border-radius: 8px;
-    z-index: 9999;
-    font-family: Arial, sans-serif;
-    text-align: center;
-}
-.bulasik{
-    display: none;
-    flex-wrap: wrap; /* Kartların satır dolması sağlanır */
-    justify-content: center; /* Kartlar ortalanır */
-    gap: 15px; /* Kartlar arasında boşluk eklenir */
-    padding: 20px;
-}
-
 .hero-section {
     text-align: center;
     background: linear-gradient(to right, #4facfe, #00f2fe);
@@ -312,60 +273,64 @@ body {
 }
 
 
-.buzdolabi_cards, .camasir_cards, .bulasik_cards{
-    background: white; /* Arka plan rengini beyaz yaptım */
-    border-radius: 15px; /* Köşeleri yuvarlattım */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gölgeler ekledim */
-    overflow: hidden; /* Taşmayı önlemek için */
-    transition: transform 0.3s, box-shadow 0.3s; /* Hover efektleri için geçiş süresi */
-    margin: 15px auto; /* Kartları ortalamak için margin ekledim */
-    text-align: center; /* Metni ortaladım */
-    padding: 20px; /* İç boşluk ekledim */
-    max-width: 350px; /* Maksimum genişlik belirledim */
+.buzdolabi, .camasir, .bulasik, .kurutma {
+    display: none;
+    flex-wrap: wrap; /* Kartların alt satıra geçmesini sağlar */
+    justify-content: center; /* Kartları yatayda ortalar */
+    gap: 25px; /* Kartlar arasına boşluk ekler */
+    padding: 20px;
+    align-items: stretch; /* Tüm kartların aynı yükseklikte olmasını sağlar */
+}
+
+.buzdolabi_cards, .camasir_cards, .bulasik_cards, .kurutma_cards {
+    background: white; 
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    overflow: hidden; 
+    transition: transform 0.3s, box-shadow 0.3s; 
+    text-align: center;
+    padding: 20px; 
+    width: 300px; /* Sabit genişlik */
+    max-width: 300px; /* Sabit maksimum genişlik */
     margin-top: 55px;
-    flex: 1 1 calc(33.333% - 30px); /* Her kart 3'te 1 genişlik alır */
-    max-width: calc(33.333% - 30px); /* Maksimum genişlik sınırlandırılır */
     box-sizing: border-box;
+    flex: 1 1 auto; /* Yüksekliği esnetir */
 }
 
-.buzdolabi_cards:hover, .camasir_cards:hover, .bulasik_cards:hover, .branch:hover {
-    transform: translateY(-10px); /* Hover'da yukarı hareket efekti */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Hover'da gölgeyi artırdım */
+
+
+.buzdolabi_cards:hover, .camasir_cards:hover, .bulasik_cards:hover, .branch:hover,.kurutma_cards:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
-.buzdolabi_image, .camasir_image, .bulasik_image{
-    width: 100%; /* Resim genişliğini yüzde olarak ayarladım */
-    height: auto; /* Yüksekliği orantılı ayarladım */
-    border-radius: 15px 15px 0 0; /* Sadece üst köşeleri yuvarlattım */
-}
-
-.buzdolabi_cards h3, .camasir_cards h3, .bulasik_cards h3 {
-    margin: 15px 0 0; /* Başlık üstü boşluk ve altı sıkıştırma */
-    font-size: 1.2rem; /* Yazı boyutunu biraz büyüttüm */
-    color: #333; /* Yazı rengini koyulaştırdım */
-    font-weight: bold; /* Kalın yazı */
-    padding: 10px; /* Ekstra iç boşluk */
-    background-color: #f9f9f9; /* Başlık için arka plan */
-    border-top: 1px solid #eee; /* Başlık üstüne bir çizgi */
+.buzdolabi_cards h3, .camasir_cards h3, .bulasik_cards h3,.kurutma_cards h3 {
+    margin: 15px 0 0; 
+    font-size: 1.2rem;
+    color: #333; 
+    font-weight: bold; 
+    padding: 10px; 
+    background-color: #f9f9f9; 
+    border-top: 1px solid #eee;
 }
 @media (max-width: 768px) {
     .buzdolabi_cards, .camasir_cards, .bulasik_cards {
-        flex: 1 1 calc(50% - 20px); /* Kartlar 2'ye bölünür */
+        flex: 1 1 calc(50% - 20px);
         max-width: calc(50% - 20px);
     }
 }
 
 @media (max-width: 480px) {
     .buzdolabi_cards, .camasir_cards, .bulasik_cards {
-        flex: 1 1 100%; /* Küçük ekranlarda kartlar tam genişlik alır */
+        flex: 1 1 100%; 
         max-width: 100%;
     }
 }
-.buzdolabi_image, .camasir_image, .bulasik_image {
-    width: 80%; /* Resmin genişliğini küçült */
-    max-width: 200px; /* Maksimum genişlik belirle */
-    height: auto; /* Yükseklik orantılı ayarlansın */
-    margin: 0 auto; /* Resmi ortala */
+.buzdolabi_image, .camasir_image, .bulasik_image,.kurutma_image{
+    width: 80%; 
+    max-width: 200px;
+    height: auto; 
+    margin: 0 auto;
 }
 .gallery-section {
     text-align: center;
@@ -375,27 +340,27 @@ body {
 
 .card-container {
     display: flex;
-    justify-content: center; /* Kartları yatayda ortalar */
-    gap: 30px; /* Kartlar arasında daha geniş boşluk bırakır */
-    flex-wrap: wrap; /* Ekran daraldığında satır sardırır */
-    margin: 40px auto; /* Üst ve alt boşluk ile ortalama */
-    max-width: 1200px; /* Maksimum genişlik */
+    justify-content: center;
+    gap: 30px; 
+    flex-wrap: wrap; 
+    margin: 40px auto;
+    max-width: 1200px; 
 }
 
 .branch-card {
-    width: 320px; /* Kart genişliği */
-    height: 220px; /* Kart yüksekliği */
-    perspective: 1000px; /* 3D efekt için perspektif */
-    margin: 20px; /* Kartların dış boşluğu */
+    width: 320px; 
+    height: 220px; 
+    perspective: 1000px; 
+    margin: 20px; 
     cursor: pointer;
 }
 
 .card-front img {
-    width: 100%; /* Resmin genişliği kartın tamamını kaplar */
-    height: auto; /* Yükseklik orantılı ayarlanır */
+    width: 100%; 
+    height: auto;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    object-fit: cover; /* Resmi kesmeden kartın içine sığdır */
+    object-fit: cover;
 }
 
 
@@ -403,15 +368,15 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    transform-style: preserve-3d; /* 3D dönüşüm */
-    transition: transform 0.6s; /* Geçiş animasyonu */
+    transform-style: preserve-3d; 
+    transition: transform 0.6s; 
 }
 
 .card-front, .card-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden; /* Arka yüzün görünmesini engelle */
+    backface-visibility: hidden; 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -432,11 +397,11 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    transform: rotateY(180deg); /* Arka yüzü döndür */
+    transform: rotateY(180deg); 
 }
 
 .branch-card.flipped .card-inner {
-    transform: rotateY(180deg); /* Kartı döndür */
+    transform: rotateY(180deg); 
 }
 .card-front h3{
     color: white;
