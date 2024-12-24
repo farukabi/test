@@ -234,44 +234,34 @@ body {
     text-align: center;
     background: linear-gradient(to right, #4facfe, #00f2fe);
     color: white;
-    padding: 100px 20px;
+    padding: 50px 20px; /* Daha az yer kaplaması için padding azaltıldı */
     margin-bottom: 20px;
 }
 
 .hero-section h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+    font-size: 2.5rem; /* Başlık boyutu küçültüldü */
+    margin-bottom: 15px;
 }
 
 .hero-section p {
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Açıklama metni boyutu küçültüldü */
     margin-bottom: 20px;
 }
 
 .hero-section .cta-button {
-    padding: 15px 30px;
-    background-color: white;
-    color: #00f2fe;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s;
+    padding: 10px 20px; /* Buton boyutu küçültüldü */
+    font-size: 0.9rem; /* Yazı boyutu küçültüldü */
 }
 
-.hero-section .cta-button:hover {
-    background-color: #00f2fe;
-    color: white;
-}
 .content-section {
-    padding: 20px;
+    padding: 15px 20px; /* İç boşluk azaltıldı */
     text-align: center;
 }
 
 .content-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+    font-size: 2rem; /* Başlık boyutu küçültüldü */
+    margin-bottom: 20px;
 }
-
 
 .buzdolabi, .camasir, .bulasik, .kurutma {
     display: none;
@@ -340,18 +330,19 @@ body {
 
 .card-container {
     display: flex;
-    justify-content: center;
-    gap: 30px; 
-    flex-wrap: wrap; 
-    margin: 40px auto;
-    max-width: 1200px; 
+    flex-wrap: wrap;
+    justify-content: center; /* Kartları ortalar */
+    gap: 20px; /* Kartlar arasına eşit boşluk */
+    padding: 10px; /* Genel boşluk */
+    margin: 0 auto; /* Ortalanmış görünüm */
+    max-width: 1200px; /* Maksimum genişlik sınırı */
 }
 
 .branch-card {
-    width: 320px; 
-    height: 220px; 
-    perspective: 1000px; 
-    margin: 20px; 
+    width: 280px; /* Kart genişliği küçültüldü */
+    height: 200px; /* Kart yüksekliği küçültüldü */
+    perspective: 1000px;
+    margin: 10px; /* Kartlar arasına boşluk eklendi */
     cursor: pointer;
 }
 
@@ -405,4 +396,37 @@ body {
 }
 .card-front h3{
     color: white;
+}
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem; /* Daha küçük başlık */
+    }
+
+    .hero-section p {
+        font-size: 1rem; /* Daha küçük açıklama metni */
+    }
+
+    .content-section h2 {
+        font-size: 1.5rem; /* Daha küçük başlık */
+    }
+
+    .card-container {
+        gap: 15px; /* Kartlar arasındaki boşluk azaltıldı */
+    }
+
+    .branch-card {
+        width: 100%; /* Kartlar tam genişlikte */
+        height: auto; /* Kart yüksekliği içeriğe göre ayarlanır */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 20px; /* Daha az padding */
+    }
+
+    .card-container {
+        flex-direction: column; /* Kartlar dikey sıralanır */
+        gap: 10px;
+    }
 }
