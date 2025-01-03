@@ -221,58 +221,58 @@ body {
 }
 
 .hakkimizdaCls ul li {
-    margin-bottom: 10px; /* Her madde arasında boşluk */
-    padding: 10px; /* İç boşluk */
-    background: #4facfe; /* Mavi arka plan */
-    color: white; /* Beyaz yazı rengi */
-    border-radius: 10px; /* Yuvarlatılmış köşeler */
-    font-size: 1.1rem; /* Yazı boyutu */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Hafif gölge */
-    text-align: center; /* Ortala */
+    margin-bottom: 10px; 
+    padding: 10px; 
+    background: #4facfe; 
+    color: white; 
+    border-radius: 10px; 
+    font-size: 1.1rem; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    text-align: center; 
 }
 .hero-section {
     text-align: center;
     background: linear-gradient(to right, #4facfe, #00f2fe);
     color: white;
-    padding: 50px 20px; /* Daha az yer kaplaması için padding azaltıldı */
+    padding: 50px 20px; 
     margin-bottom: 20px;
 }
 
 .hero-section h1 {
-    font-size: 2.5rem; /* Başlık boyutu küçültüldü */
+    font-size: 2.5rem; 
     margin-bottom: 15px;
 }
 
 .hero-section p {
-    font-size: 1.2rem; /* Açıklama metni boyutu küçültüldü */
+    font-size: 1.2rem; 
     margin-bottom: 20px;
 }
 
 .hero-section .cta-button {
-    padding: 10px 20px; /* Buton boyutu küçültüldü */
-    font-size: 0.9rem; /* Yazı boyutu küçültüldü */
+    padding: 10px 20px; 
+    font-size: 0.9rem; 
     background-color: white;
     border-radius: 20px;
     text-decoration: none;
     color: #c0392b;
 }
 .content-section {
-    padding: 15px 20px; /* İç boşluk azaltıldı */
+    padding: 15px 20px; 
     text-align: center;
 }
 
 .content-section h2 {
-    font-size: 2rem; /* Başlık boyutu küçültüldü */
+    font-size: 2rem; 
     margin-bottom: 20px;
 }
 
 .buzdolabi, .camasir, .bulasik, .kurutma {
     display: none;
-    flex-wrap: wrap; /* Kartların alt satıra geçmesini sağlar */
-    justify-content: center; /* Kartları yatayda ortalar */
-    gap: 25px; /* Kartlar arasına boşluk ekler */
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 25px; 
     padding: 20px;
-    align-items: stretch; /* Tüm kartların aynı yükseklikte olmasını sağlar */
+    align-items: stretch; 
 }
 
 .buzdolabi_cards, .camasir_cards, .bulasik_cards, .kurutma_cards {
@@ -283,11 +283,11 @@ body {
     transition: transform 0.3s, box-shadow 0.3s; 
     text-align: center;
     padding: 20px; 
-    width: 300px; /* Sabit genişlik */
-    max-width: 300px; /* Sabit maksimum genişlik */
+    width: 300px; 
+    max-width: 300px; 
     margin-top: 55px;
     box-sizing: border-box;
-    flex: 1 1 auto; /* Yüksekliği esnetir */
+    flex: 1 1 auto; 
 }
 
 
@@ -337,7 +337,25 @@ body {
     flex-wrap: wrap;
     gap: 40px;
     display: none;
-   
+    background-color: #e74c3c;
+}
+.gallery-section-yatak {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    flex-wrap: wrap;
+    gap: 40px;
+    display: none;
+    background-color: #e74c3c;
+}
+.gallery-section-dolap {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    flex-wrap: wrap;
+    gap: 40px;
+    display: none;
+    background-color: #e74c3c;
 }
 @media (max-width: 768px) {
     .hero-section h1 {
