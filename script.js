@@ -12,12 +12,15 @@ const kurutmalik = document.getElementById("kurutma");
 const mobilyaResim = document.getElementById("galleryMobilya");
 const yatakResim = document.getElementById("galleryYatak");
 const dolapResim = document.getElementById("galleryDolap");
+const info = document.getElementById('contact-info');
 function iconClicked(){
   document.getElementById('contact-info').classList.add('active');
+  info.scrollIntoView({ behavior: 'smooth', block: 'end' });
 } 
 
 function closeInfoBox () {
     document.getElementById('contact-info').classList.remove('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function toggleCategories (){
     categoriesBar.classList.toggle('hidden');
@@ -49,6 +52,8 @@ function showHakkimizda(){
     mobilyaResim.style.display="none";
     yatakResim.style.display = "none";
     dolapResim.style.display = "none";
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
 }
 function showBuzdolabi() {
     buzdolabiSection.style.display = 'flex';
@@ -64,6 +69,7 @@ function showBuzdolabi() {
     mobilyaResim.style.display="none";
     yatakResim.style.display = "none";
     dolapResim.style.display = "none";
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showCamasir(){
     camasirMakineleri.style.display='flex';
@@ -79,6 +85,7 @@ function showCamasir(){
     mobilyaResim.style.display="none";
     yatakResim.style.display = "none";
     dolapResim.style.display = "none";
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function resetView(){
     buzdolabiSection.style.display = 'none'; 
@@ -92,6 +99,7 @@ function resetView(){
     mobilyaResim.style.display="none";
     yatakResim.style.display = "none";
     dolapResim.style.display = "none";
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showBulasik(){
     bulasikMak.style.display = "flex";
@@ -107,6 +115,7 @@ function showBulasik(){
     mobilyaResim.style.display="none";
     yatakResim.style.display = "none";
     dolapResim.style.display = "none";
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showKurutma(){
     bulasikMak.style.display = "none";
@@ -122,6 +131,7 @@ function showKurutma(){
     mobilyaResim.style.display="none";
     yatakResim.style.display = "none";
     dolapResim.style.display = "none";
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showMobilyaResim(){
     bulasikMak.style.display = "none";
@@ -138,6 +148,7 @@ function showMobilyaResim(){
     mobilyaResim.style.display = "flex";
     yatakResim.style.display = "none";
     dolapResim.style.display = "none";
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showYatakResim(){
     bulasikMak.style.display = "none";
@@ -154,6 +165,7 @@ function showYatakResim(){
     mobilyaResim.style.display = "none";
     yatakResim.style.display = "flex";
     dolapResim.style.display = "none";
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showDolapResim(){
     bulasikMak.style.display = "none";
@@ -170,4 +182,5 @@ function showDolapResim(){
     mobilyaResim.style.display = "none";
     yatakResim.style.display = "none";
     dolapResim.style.display = "flex";
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
