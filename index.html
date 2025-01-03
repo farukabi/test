@@ -98,11 +98,12 @@
     <div id="contact-info" class="info-box">
         <h2>İletişim Bilgileri</h2>
         <p><i class="fas fa-envelope"></i> email: avantaj32@hotmail.com</p>
-        <p><i class="fas fa-phone-alt"></i> tel: 05336412030</p>
+        <p><h3>Doğanlar Şube:</h3>1521 sk. No:112 Doğanlar Mh. Bornova/İzmir <br><i class="fas fa-phone-alt"></i> tel: 05368846614</p>
+        <p><h3>Bayraklı Şube:</h3>Sakarya Cad. No:92/A Bayraklı/İzmir <br><i class="fas fa-phone-alt"></i> tel: 05336412030</p>
         <button class="contactBtn" onclick="closeInfoBox()">Kapat</button>
     </div>    
     <div id="categories-bar" class="categories hidden">
-        <button class="closeBtn" onclick="closeCategories()">&times;</button>
+        <button class="closeBtn" onclick="closeCategories()"><i class="fas fa-angle-double-left" ></i></button>
         <h2>Kategoriler</h2>
         <ul>
             <li onclick="showSubcategories()">Beyaz Eşya</li>
@@ -115,7 +116,7 @@
     </div>
     <div id="subcategories-bar" class="subcategories hidden">
         <h2>Beyaz Eşya</h2>
-        <button class="closeBtn" onclick="closeSubcategories()">&times;</button>
+        <button class="closeBtn" onclick="closeSubcategories()"><i class="fas fa-angle-double-left" ></i></button>
         <ul>
             <li onclick="showBuzdolabi()">Buzdolabı</li>
             <li onclick="showCamasir()">Çamaşır Makinesi</li>
@@ -185,14 +186,14 @@
     </div>
     <div id="subcategories-bar-mobilya" class="subcategories hidden">
         <h2>Mobilya</h2>
-        <button class="closeBtn" onclick="closeMobilya()">&times;</button>
+        <button class="closeBtn" onclick="closeMobilya()"><i class="fas fa-angle-double-left" ></i></button>
         <ul>
             <li onclick="showMobilyaResim()">Koltuk Takımı</li>
-            <li onclick="">Yatak-Baza-Başlık</li>
-            <li onclick="">Dolap</li>
+            <li onclick="showYatakResim()">Yatak-Baza-Başlık</li>
+            <li onclick="showDolapResim()">Dolap</li>
         </ul>
     </div>
-    <div id="galleryMobilya" class="carousel slide gallery-section-mobilya" data-bs-ride="carousel">
+    <div id="galleryMobilya" class="carousel slide gallery-section-mobilya">
         <div class="kurutma_cards">
             <img class="kurutma_image" src="img/mobilya1.jpg" alt="">
             <h3>Koltuk Takımı 1</h3>
@@ -204,6 +205,34 @@
         <div class="kurutma_cards">
             <img class="kurutma_image" src="img/mobilya3.jpg" alt="">
             <h3>Koltuk Takımı 3</h3>
+        </div>
+    </div>
+    <div id="galleryYatak" class="carousel slide gallery-section-yatak">
+        <div class="kurutma_cards">
+            <img class="kurutma_image" src="img/yatak1.jpg" alt="">
+            <h3>Yatak Takımı 1</h3>
+        </div>
+        <div class="kurutma_cards">
+            <img class="kurutma_image" src="img/yatak2.jpg" alt="">
+            <h3>Yatak Takımı 2</h3>
+        </div>
+        <div class="kurutma_cards">
+            <img class="kurutma_image" src="img/yatak3.jpg" alt="">
+            <h3>Yatak Takımı 3</h3>
+        </div>
+    </div>
+    <div id="galleryDolap" class="carousel slide gallery-section-dolap">
+        <div class="kurutma_cards">
+            <img class="kurutma_image" src="img/dolap1.jpg" alt="">
+            <h3>Dolap 1</h3>
+        </div>
+        <div class="kurutma_cards">
+            <img class="kurutma_image" src="img/dolap2.jpg" alt="">
+            <h3>Dolap 2</h3>
+        </div>
+        <div class="kurutma_cards">
+            <img class="kurutma_image" src="img/dolap3.jpg" alt="">
+            <h3>Dolap 3</h3>
         </div>
     </div>
        
