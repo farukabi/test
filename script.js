@@ -10,20 +10,12 @@ const buzdolabiSection = document.getElementById('buzdolabi');
 const galery = document.getElementById("galleryCarousel");
 const kurutmalik = document.getElementById("kurutma");
 const mobilyaResim = document.getElementById("galleryMobilya");
-
+const yatakResim = document.getElementById("galleryYatak");
+const dolapResim = document.getElementById("galleryDolap");
 function iconClicked(){
   document.getElementById('contact-info').classList.add('active');
 } 
-function showHakkimizda(){
-    hakkimizda.style.display = 'block';
-    mainImage.classList.add("hidden");
-    subeler.classList.add("hidden");
-    buzdolabiSection.style.display = 'none'; 
-    camasirMakineleri.style.display = "none";
-    bulasikMak.style.display = "none";
-    galery.classList.add('hidden');
-    kurutmalik.style.display = "none";
-}
+
 function closeInfoBox () {
     document.getElementById('contact-info').classList.remove('active');
 }
@@ -45,8 +37,21 @@ function closeMobilya(){
 function closeSubcategories(){
     subcategoriesBar.classList.add('hidden');
 }
+function showHakkimizda(){
+    hakkimizda.style.display = 'block';
+    mainImage.classList.add("hidden");
+    subeler.classList.add("hidden");
+    buzdolabiSection.style.display = 'none'; 
+    camasirMakineleri.style.display = "none";
+    bulasikMak.style.display = "none";
+    galery.classList.add('hidden');
+    kurutmalik.style.display = "none";
+    mobilyaResim.style.display="none";
+    yatakResim.style.display = "none";
+    dolapResim.style.display = "none";
+}
 function showBuzdolabi() {
-    buzdolabiSection.style.display = 'flex'; // Show the section
+    buzdolabiSection.style.display = 'flex';
     categoriesBar.classList.add('hidden');
     subcategoriesBar.classList.add('hidden');
     mainImage.classList.add('hidden');
@@ -57,6 +62,8 @@ function showBuzdolabi() {
     galery.classList.add('hidden');
     kurutmalik.style.display = "none";
     mobilyaResim.style.display="none";
+    yatakResim.style.display = "none";
+    dolapResim.style.display = "none";
 }
 function showCamasir(){
     camasirMakineleri.style.display='flex';
@@ -70,6 +77,8 @@ function showCamasir(){
     galery.classList.add('hidden');
     kurutmalik.style.display = "none";
     mobilyaResim.style.display="none";
+    yatakResim.style.display = "none";
+    dolapResim.style.display = "none";
 }
 function resetView(){
     buzdolabiSection.style.display = 'none'; 
@@ -81,6 +90,8 @@ function resetView(){
     galery.classList.remove('hidden');
     kurutmalik.style.display = "none";
     mobilyaResim.style.display="none";
+    yatakResim.style.display = "none";
+    dolapResim.style.display = "none";
 }
 function showBulasik(){
     bulasikMak.style.display = "flex";
@@ -94,6 +105,8 @@ function showBulasik(){
     kurutmalik.style.display = "none";
     galery.classList.add('hidden');
     mobilyaResim.style.display="none";
+    yatakResim.style.display = "none";
+    dolapResim.style.display = "none";
 }
 function showKurutma(){
     bulasikMak.style.display = "none";
@@ -107,6 +120,8 @@ function showKurutma(){
     galery.classList.add('hidden');
     kurutmalik.style.display = "flex";
     mobilyaResim.style.display="none";
+    yatakResim.style.display = "none";
+    dolapResim.style.display = "none";
 }
 function showMobilyaResim(){
     bulasikMak.style.display = "none";
@@ -121,6 +136,38 @@ function showMobilyaResim(){
     galery.classList.add('hidden');
     kurutmalik.style.display = "none";
     mobilyaResim.style.display = "flex";
+    yatakResim.style.display = "none";
+    dolapResim.style.display = "none";
 }
-
- 
+function showYatakResim(){
+    bulasikMak.style.display = "none";
+    categoriesBar.classList.add('hidden');
+    subcategoriesBar.classList.add('hidden');
+    subcategoriesBarMobilya.classList.add("hidden");
+    mainImage.classList.add('hidden');
+    subeler.classList.add("hidden");
+    camasirMakineleri.style.display = "none";
+    buzdolabiSection.style.display = 'none'; 
+    hakkimizda.style.display = "none";
+    galery.classList.add('hidden');
+    kurutmalik.style.display = "none";
+    mobilyaResim.style.display = "none";
+    yatakResim.style.display = "flex";
+    dolapResim.style.display = "none";
+}
+function showDolapResim(){
+    bulasikMak.style.display = "none";
+    categoriesBar.classList.add('hidden');
+    subcategoriesBar.classList.add('hidden');
+    subcategoriesBarMobilya.classList.add("hidden");
+    mainImage.classList.add('hidden');
+    subeler.classList.add("hidden");
+    camasirMakineleri.style.display = "none";
+    buzdolabiSection.style.display = 'none'; 
+    hakkimizda.style.display = "none";
+    galery.classList.add('hidden');
+    kurutmalik.style.display = "none";
+    mobilyaResim.style.display = "none";
+    yatakResim.style.display = "none";
+    dolapResim.style.display = "flex";
+}
