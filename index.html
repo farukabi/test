@@ -22,7 +22,7 @@
             <i class="fas fa-info-circle"></i>
             <span>Hakkımızda</span>
         </a>
-        <a href="#contact" onclick="iconClicked('Contact')">
+        <a href="#contact" onclick="iconClicked()">
             <i class="fas fa-envelope"></i>
             <span>İletişim</span>
         </a>
@@ -55,7 +55,7 @@
                 <img src="https://lh3.googleusercontent.com/p/AF1QipPgfv4lphinRH4J21cakHYiQOGdGTzmnptJKdWF=s680-w680-h510-rw" class="d-block w-100" alt="Mağaza 4">
             </div>
             <div class="carousel-item">
-                <img src="https://lh5.googleusercontent.com/p/AF1QipNH6KmENu0ynXphEssOJfIEwz87qM97dSdvWOan=w211-h176-n-k-no-nu" class="d-block w-100" alt="Mağaza 4">
+                <img src="img/1.jpeg" class="d-block w-100" alt="Mağaza 4">
             </div>
             <div class="carousel-item">
                 <img src="https://lh3.googleusercontent.com/p/AF1QipMSP6iV3poZYOGVLWGVdn3350LMtl8JYdOMcgPj=s680-w680-h510-rw" class="d-block w-100" alt="Mağaza 4">
@@ -74,32 +74,22 @@
     <div class="content-section" id="home">
         <h2>Şubelerimiz</h2>
         <div class="card-container">
-            <div class="branch-card" onclick="flipCard(this)">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="https://www.dir.gen.tr/image/187223-0-avantaj-avm.jpg" alt="Bayraklı Şube">
-                        <h3>Bayraklı Şubemiz</h3>
-                    </div>
-                    <div class="card-back">
-                        <h3>Bayraklı Şubemiz</h3>
-                        <p>Sakarya Caddesi No:92/A Bayraklı/İzmir</p>
-                    </div>
+            <div class="branch-card">
+                <div class="card-front">
+                    <img src="https://www.dir.gen.tr/image/187223-0-avantaj-avm.jpg" alt="Bayraklı Şube">
+                    <h3>Bayraklı Şubemiz</h3>
                 </div>
             </div>
-            <div class="branch-card" onclick="flipCard(this)">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="https://avatars.mds.yandex.net/get-altay/10239151/2a0000019171b39473471b31f14e6fcc9161/L_height" alt="Doğanlar Şube">
-                        <h3>Doğanlar Şubemiz</h3>
-                    </div>
-                    <div class="card-back">
-                        <h3>Doğanlar Şubemiz</h3>
-                        <p>1521 sokak No:112 Doğanlar Mahallesi Bornova/İzmir</p>
-                    </div>
+            <div class="branch-card">
+                <div class="card-front">
+                    <img src="https://avatars.mds.yandex.net/get-altay/10239151/2a0000019171b39473471b31f14e6fcc9161/L_height" alt="Doğanlar Şube">
+                    <h3>Doğanlar Şubemiz</h3>
                 </div>
             </div>
         </div>
     </div>
+    
+    
     <div id="branch-info" class="branch-info hidden">
         <button onclick="closeBranchInfo()">Kapat</button>
         <h2 id="branch-name"></h2>
@@ -116,7 +106,7 @@
         <h2>Kategoriler</h2>
         <ul>
             <li onclick="showSubcategories()">Beyaz Eşya</li>
-            <li>Mobilya</li>
+            <li onclick="showMobilya()">Mobilya</li>
             <li>Tekstil</li>
             <li>Küçük Ev Aletleri</li>
             <li>Züccaciye</li>
@@ -193,6 +183,30 @@
             <h3>Altus AL 81 IC 8 Kg Kurutma Makinesi</h3>
         </div>
     </div>
+    <div id="subcategories-bar-mobilya" class="subcategories hidden">
+        <h2>Mobilya</h2>
+        <button class="closeBtn" onclick="closeMobilya()">&times;</button>
+        <ul>
+            <li onclick="showMobilyaResim()">Koltuk Takımı</li>
+            <li onclick="">Yatak-Baza-Başlık</li>
+            <li onclick="">Dolap</li>
+        </ul>
+    </div>
+    <div id="galleryMobilya" class="carousel slide gallery-section-mobilya" data-bs-ride="carousel">
+        <div class="kurutma_cards">
+            <img class="kurutma_image" src="img/mobilya1.jpg" alt="">
+            <h3>Koltuk Takımı 1</h3>
+        </div>
+        <div class="kurutma_cards">
+            <img class="kurutma_image" src="img/mobilya2.jpg" alt="">
+            <h3>Koltuk Takımı 2</h3>
+        </div>
+        <div class="kurutma_cards">
+            <img class="kurutma_image" src="img/mobilya3.jpg" alt="">
+            <h3>Koltuk Takımı 3</h3>
+        </div>
+    </div>
+       
     <div id="hakkimizda" class="hakkimizdaCls">
         <h2>Hakkımızda</h2>
         <p>
