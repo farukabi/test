@@ -264,6 +264,7 @@ body {
 .content-section h2 {
     font-size: 2rem; 
     margin-bottom: 20px;
+    
 }
 
 .buzdolabi, .camasir, .bulasik, .kurutma {
@@ -289,9 +290,6 @@ body {
     box-sizing: border-box;
     flex: 1 1 auto; 
 }
-
-
-
 .buzdolabi_cards:hover, .camasir_cards:hover, .bulasik_cards:hover, .branch:hover,.kurutma_cards:hover {
     transform: translateY(-10px); 
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
@@ -320,7 +318,11 @@ body {
     }
 }
 .buzdolabi_image, .camasir_image, .bulasik_image,.kurutma_image{
-    width: 80%; 
+    
+    width: 100%; /* Kartın genişliğini tamamen kaplar */
+    height: 250px; /* Sabit yükseklik belirlenir */
+    object-fit: contain; /* Görseller orantılı olarak küçültülür ve taşma olmaz */
+    border-bottom: 1px solid #eee; /* Alt kısmı ayırmak için çizgi */
     max-width: 200px;
     height: auto; 
     margin: 0 auto;
@@ -393,6 +395,7 @@ body {
     overflow: hidden; /* Taşma engellenir */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover animasyonu */
     text-align: center;
+    height: fit-content;
 }
 
 .branch-card img {
