@@ -103,6 +103,7 @@ function resetView(){
     mobilyaResim.style.display="none";
     yatakResim.style.display = "none";
     dolapResim.style.display = "none";
+    brands.classList.remove("hidden");
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showBulasik(){
