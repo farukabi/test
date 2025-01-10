@@ -307,9 +307,13 @@ body {
     .content-section h2 {
         font-size: 1.5rem; /* Daha küçük başlık */
     }
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .branch-card {
-        flex: 1 1 calc(50% - 20px); /* Orta ekranlarda %50 genişlik */
-        max-width: calc(50% - 20px);
+        width: 300px; /* Boyutu sabit tutar */
     }
     .menubar {
         flex-wrap: wrap; /* Daha küçük ekranlarda menüyü sardır */
@@ -377,30 +381,28 @@ body {
     background-color: #e74c3c;
 }
 .card-container {
-    display: flex; /* Flex düzeni etkinleştir */
-    flex-wrap: wrap; /* Kartları sardır */
-    gap: 20px; /* Kartlar arasındaki boşluk */
-    justify-content: center; /* Kartları yatayda ortala */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .branch-card {
-    flex: 1 1 calc(33.33% - 20px); /* Kart genişliğini %33.33 olarak ayarla */
-    max-width: calc(33.33% - 20px); /* Maksimum genişlik aynı */
-    box-sizing: border-box; /* Padding ve border'ı genişliğe dahil et */
-    background-color: white; /* Beyaz arka plan */
-    border-radius: 10px; /* Yuvarlatılmış köşeler */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
-    overflow: hidden; /* Taşma engellenir */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover animasyonu */
+    flex: 1 1 auto;
+    max-width: 300px; /* Kart genişliğini sabit tutar */
+    width: 300px; /* Sabit genişlik */
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
-    height: fit-content;
 }
 
 .branch-card img {
-    width: 100%; /* Resimler kartı tamamen kaplasın */
-    height: auto; /* Oranlar korunsun */
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    width: 100%;
+    height: auto;
 }
 
 .branch-card h3 {
@@ -411,14 +413,14 @@ body {
 }
 
 .branch-card:hover {
-    transform: scale(1.05); /* Hover sırasında kartı büyüt */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Daha belirgin gölge efekti */
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 .brands-section {
     text-align: center;
     margin: 40px 0;
     background-color: white;
-    height: 110px;
+    height: 140px;
 }
 
 .brands-container {
@@ -428,6 +430,7 @@ body {
     padding: 10px 0;
     scrollbar-width: thin;
     scrollbar-color: #888 #f1f1f1;
+    margin-left: 15px;
 }
 
 /* Kaydırma çubuğu özelleştirmesi (Chrome, Edge, Safari) */
