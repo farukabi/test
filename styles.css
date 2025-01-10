@@ -420,7 +420,7 @@ body {
     text-align: center;
     margin: 40px 0;
     background-color: white;
-    height: 140px;
+    vertical-align: bottom;
 }
 
 .brands-container {
