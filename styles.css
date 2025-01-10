@@ -37,19 +37,6 @@ body {
     font-size: 1.5rem; /* İkon boyutunu artır */
     margin-right: 8px; /* İkon ve yazı arasında boşluk bırak */
 }
-
-@media (max-width: 768px) {
-    .menubar {
-        flex-wrap: wrap; /* Daha küçük ekranlarda menüyü sardır */
-    }
-
-    .menubar a {
-        flex: 1 1 calc(33.33% - 10px); /* Mobil uyumlu sütun görünümü */
-        text-align: center; /* Metni ortala */
-        margin: 5px 0; /* Öğeler arasında boşluk bırak */
-    }
-}
-
 .info-box {
     display: none; /* Varsayılan olarak gizli */
     margin: 20px auto; /* Ortalamak için */
@@ -309,11 +296,41 @@ body {
         flex: 1 1 calc(50% - 20px);
         max-width: calc(50% - 20px);
     }
+    .hero-section h1 {
+        font-size: 2rem; /* Daha küçük başlık */
+    }
+
+    .hero-section p {
+        font-size: 1rem; /* Daha küçük açıklama metni */
+    }
+
+    .content-section h2 {
+        font-size: 1.5rem; /* Daha küçük başlık */
+    }
+    .branch-card {
+        flex: 1 1 calc(50% - 20px); /* Orta ekranlarda %50 genişlik */
+        max-width: calc(50% - 20px);
+    }
+    .menubar {
+        flex-wrap: wrap; /* Daha küçük ekranlarda menüyü sardır */
+    }
+    .menubar a {
+        flex: 1 1 calc(33.33% - 10px); /* Mobil uyumlu sütun görünümü */
+        text-align: center; /* Metni ortala */
+        margin: 5px 0; /* Öğeler arasında boşluk bırak */
+    }
 }
 
 @media (max-width: 480px) {
     .buzdolabi_cards, .camasir_cards, .bulasik_cards {
         flex: 1 1 100%; 
+        max-width: 100%;
+    }
+    .hero-section {
+        padding: 20px; /* Daha az padding */
+    }
+    .branch-card {
+        flex: 1 1 100%; /* Küçük ekranlarda tam genişlik */
         max-width: 100%;
     }
 }
@@ -359,25 +376,6 @@ body {
     display: none;
     background-color: #e74c3c;
 }
-@media (max-width: 768px) {
-    .hero-section h1 {
-        font-size: 2rem; /* Daha küçük başlık */
-    }
-
-    .hero-section p {
-        font-size: 1rem; /* Daha küçük açıklama metni */
-    }
-
-    .content-section h2 {
-        font-size: 1.5rem; /* Daha küçük başlık */
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-section {
-        padding: 20px; /* Daha az padding */
-    }
-}
 .card-container {
     display: flex; /* Flex düzeni etkinleştir */
     flex-wrap: wrap; /* Kartları sardır */
@@ -416,18 +414,44 @@ body {
     transform: scale(1.05); /* Hover sırasında kartı büyüt */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Daha belirgin gölge efekti */
 }
-
-@media (max-width: 768px) {
-    .branch-card {
-        flex: 1 1 calc(50% - 20px); /* Orta ekranlarda %50 genişlik */
-        max-width: calc(50% - 20px);
-    }
+.brands-section {
+    text-align: center;
+    margin: 40px 0;
+    background-color: white;
+    height: 110px;
 }
 
-@media (max-width: 480px) {
-    .branch-card {
-        flex: 1 1 100%; /* Küçük ekranlarda tam genişlik */
-        max-width: 100%;
-    }
+.brands-container {
+    display: flex;
+    gap: 30px; /* Görseller arasındaki boşluk */
+    overflow-x: auto; /* Yatay kaydırma ekler */
+    padding: 10px 0;
+    scrollbar-width: thin; /* İnce kaydırma çubuğu (Firefox) */
+    scrollbar-color: #888 #f1f1f1; /* Kaydırma çubuğu rengi (Firefox) */
 }
 
+/* Kaydırma çubuğu özelleştirmesi (Chrome, Edge, Safari) */
+.brands-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.brands-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.brands-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+.brands-container img {
+    width: 150px; /* Tüm logoların aynı boyutta olması için */
+    height: auto;
+    flex-shrink: 0; /* Küçülmesini engeller */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brands-container img:hover {
+    transform: scale(1.1); /* Hover efekti */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
