@@ -423,16 +423,16 @@ body {
 
 .brands-container {
     display: flex;
-    gap: 30px; /* Görseller arasındaki boşluk */
+    gap: 20px; /* Görseller arasındaki boşluk */
     overflow-x: auto; /* Yatay kaydırma ekler */
     padding: 10px 0;
-    scrollbar-width: thin; /* İnce kaydırma çubuğu (Firefox) */
-    scrollbar-color: #888 #f1f1f1; /* Kaydırma çubuğu rengi (Firefox) */
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
 }
 
 /* Kaydırma çubuğu özelleştirmesi (Chrome, Edge, Safari) */
 .brands-container::-webkit-scrollbar {
-    height: 8px;
+    height: 6px;
 }
 
 .brands-container::-webkit-scrollbar-thumb {
@@ -445,13 +445,35 @@ body {
 }
 
 .brands-container img {
-    width: 150px; /* Tüm logoların aynı boyutta olması için */
+    width: 150px;
     height: auto;
-    flex-shrink: 0; /* Küçülmesini engeller */
+    flex-shrink: 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .brands-container img:hover {
-    transform: scale(1.1); /* Hover efekti */
+    transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobil cihazlar için görsel boyutunu küçültme */
+@media (max-width: 768px) {
+    .brands-container img {
+        width: 100px; /* Küçük ekranlarda logo boyutu küçülür */
+    }
+
+    .brands-container {
+        gap: 15px; /* Mobilde logolar arasındaki boşluk azalır */
+    }
+}
+
+/* Daha küçük ekranlar (telefonlar) için */
+@media (max-width: 480px) {
+    .brands-container img {
+        width: 80px; /* Çok küçük ekranlarda daha küçük logo */
+    }
+
+    .brands-container {
+        gap: 10px;
+    }
 }
